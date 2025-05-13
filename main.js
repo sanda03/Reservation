@@ -5,13 +5,11 @@ const { now, plusHours, plusDays } = require('./utils/dateUtils');
 const reservationService = new ReservationService();
 const car = new Item('Voiture');
 
-// Réservation d'une après-midi (même jour)
 const start = now();
-const endSameDay = plusHours(5); // même jour
+const endSameDay = plusHours(5);
 
-// Réservation sur plusieurs jours
 const startNow = plusDays(1);
-const endNextDay = plusDays(1); // jour suivant
+const endNextDay = plusDays(1);
 
 console.log('\n🔵 Réservation d\'une après-midi (même jour) :');
 reservationService.reserveItem(car, start, endSameDay);
