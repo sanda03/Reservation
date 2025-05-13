@@ -15,7 +15,6 @@ public class ReservationService {
 
     private long calculateDays(LocalDateTime startTime, LocalDateTime endTime) {
         long days = ChronoUnit.DAYS.between(startTime.toLocalDate(), endTime.toLocalDate());
-        // Ajouter 1 si les dates sont dans la même journée
         return days == 0 ? 1 : days + 1;
     }
     public boolean isAvailable(Item item, LocalDateTime startTime, LocalDateTime endTime) {
